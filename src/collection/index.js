@@ -1,4 +1,4 @@
-import {lt, gt} from '../number/index'
+import {lt, gt} from '../number/index.js'
 
 /**
  * The old name of Arles. Returns a function returning

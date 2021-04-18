@@ -1,4 +1,4 @@
-import {shortestLengthA, arelatStar} from '../collection/index'
+import {shortestLengthA, arelatStar} from '../collection/index.js'
 
 /**
  * Like Array.prototype.map, BUT works on `[new]

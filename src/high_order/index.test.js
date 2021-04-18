@@ -1,5 +1,5 @@
 import * as ho from './index.js'
-import {ADD} from '../number/index'
+import {ADD} from '../number/index.js'
 import {jest} from '@jest/globals'
 
 
