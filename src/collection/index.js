@@ -1,3 +1,5 @@
+//@ts-check
+
 import {lt, gt} from '../number/index.js'
 
 /**
@@ -95,6 +97,25 @@ export function shortestLengthA(xs){
     return lengthsA(xs).sort()[0]
 }
 
+
+/**
+ * Return n-grams from xs elements
+ * n defaults to 2
+ * @param {Array} xs 
+ * @param {Number} [n=2]
+ */
+export function ngram(xs, n){
+    if(!n){ n = 2 }
+    if(n > xs.length){
+        return []
+    }
+    const stop = xs.length - n + 1
+    const res = Array(stop)
+    for(let i = 0; i < stop; i++){
+        res[i] = xs.slice(i, i+n)
+    }
+    return res
+}
 
 
 /**

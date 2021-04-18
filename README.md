@@ -10,8 +10,12 @@ I started this during my bootcamp @
 [Konexio](https://www.konexio.eu/index.html), hopefully this
 project doesn't make them look bad. Whoops.
 
-TODO: have not figured this part out yes: I can install it
-as an npm but how do I keep it up to date with the repo?
+TODO: add install notes with npm
+
+```git+https://github.com/grenle/tsurubokkusu.git```
+
+```git+ssh://git@github.com:grenle/tsurubokkusu.git```
+
 
 Feel free to use it or parts. Please report bugs and
 improvements.
@@ -41,8 +45,8 @@ npm test
 
 ### devDependencies
 
-- Jest for testing, Mocha wouldn't behave with es modules +
-  watch.
+- Jest for testing, Mocha wouldn't behave with es modules
+  and watch.
 
 ## Get it
 

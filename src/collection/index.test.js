@@ -82,6 +82,34 @@ describe('lengths', () => {
 })
 
 
+describe('ngram', () => {
+    test('', () => {
+        expect(ar.ngram([])).toStrictEqual([])
+    })
+    test('', () => {
+        expect(ar.ngram([2])).toStrictEqual([])
+    })
+    test('', () => {
+        expect(ar.ngram([2, 4])).toStrictEqual([[2, 4]])
+    })
+    test('', () => {
+        expect(ar.ngram([2, 4, 6]))
+        .toStrictEqual([[2,4],[4,6]])
+    })
+    test('', () => {
+        expect(ar.ngram([2, 4], 3)).toStrictEqual([])
+    })
+    test('', () => {
+        expect(ar.ngram([2, 4, 5], 3))
+        .toStrictEqual([[2, 4, 5]])
+    })
+    test('', () => {
+        expect(ar.ngram([2, 4, 5, 6], 3))
+        .toStrictEqual([[2, 4, 5], [4, 5, 6]])
+    })
+})
+
+
 describe('range', () => {
     test('Nullary call => []', () => {
         expect(ar.range()).toStrictEqual([])
