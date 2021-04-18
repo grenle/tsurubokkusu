@@ -1,12 +1,9 @@
 {
   "name": "tsurubokkusu",
   "description": "A little personnal toolbox",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "test": "node --no-warnings --experimental-vm-modules node_modules/.bin/jest --watch"
-  },
-  "jest": {
-
   },
   "type": "module",
   "repository": {
