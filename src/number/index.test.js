@@ -79,3 +79,22 @@ describe('DIV', () => {
         expect(num.DIV(5,2)).toBe(2.5)
     })
 })
+
+
+describe('between', () => {
+    test('between(1, 3)(0)',() => {
+        expect(num.between(1, 3)(0)).toBe(false)
+    })
+    test('between(1, 3)(1)',() => {
+        expect(num.between(1, 3)(1)).toBe(true)
+    })
+    test('between(1, 3)(2)',() => {
+        expect(num.between(1, 3)(2)).toBe(true)
+    })
+    test('between(1, 3)(3)',() => {
+        expect(num.between(1, 3)(3)).toBe(false)
+    })
+    test('between(1, 3)(4)',() => {
+        expect(num.between(1, 3)(4)).toBe(false)
+    })
+})

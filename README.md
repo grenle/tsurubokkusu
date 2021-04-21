@@ -10,6 +10,8 @@ I started this during my bootcamp @
 [Konexio](https://www.konexio.eu/index.html), hopefully this
 project doesn't make them look bad. Whoops.
 
+TODO: revisit ngram, it's ugly
+
 TODO: add install notes with npm
 
 ```git+https://github.com/grenle/tsurubokkusu.git```

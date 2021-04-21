@@ -65,3 +65,27 @@ export const MUL = (x, y) => x * y
   * @returns {Number}
   */
 export const DIV = (x, y) => x / y
+
+
+/**
+ * Number × Number -> Number -> Boolean
+ *
+ * Return a function returning a Boolean indicating wether n
+ * is in [x, y)
+ *
+ * Like random and Python's range, x is inclusive and y is
+ * exclusive
+ * @param {Number} x 
+ * @param {Number} y 
+ * @returns {Function}
+ */
+export function between(x, y){
+  /**
+   * @param {Number} n 
+   * @returns 
+   */
+  function _(n){
+      return n >= x && n < y
+  }
+  return _
+}
