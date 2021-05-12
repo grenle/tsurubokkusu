@@ -1,5 +1,8 @@
 //@ts-check
 
+// Add ho map like function for object's keys/values or both
+// f(o, fkey, fvalue), f(o, fkey), f(o, fkey, undefined), f(o, undefined, fkey)
+
 import {lt, gt} from '../number/index.js'
 
 /**
