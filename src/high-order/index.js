@@ -1,5 +1,8 @@
 import {shortestLengthA, arelatStar} from '../collection/index.js'
 
+export function I(x){ return x }
+export function K(x){ return function(y){ return x } }
+
 /**
  * Like Array.prototype.map, BUT works on `[new]
  * Array(<length>)`
@@ -36,4 +39,33 @@ export function schemap(f, arr){
         res[i] = f.apply(null, arelatStar(i).apply(null, args))
     }
     return res
+}
+
+/**
+ * Given an array of functions, returns a function defined
+ * by the composition of the functions in the list
+ *
+ * `composerA(f, g, h)(3) => f(g(h(3)))`
+ * @param {Array<function>} fs - the list of functions to
+ * compose
+ * @returns {function} - the function defined by the
+ * composition of functions in fs
+ */
+export function composerA(fs){
+    if(!fs.length){
+        return I
+    }
+    if(fs.length === 1){
+        return fs[0]
+    }
+    const funcs = [...fs].reverse()
+    const firstFunc = funcs[0]
+    const restFuncs = funcs.slice(1)
+    return function(arg){
+        let res = firstFunc(arg)
+        for(let i = 0; i < restFuncs.length; i++){
+            res = restFuncs[i](res)
+        }
+        return res
+    }
 }

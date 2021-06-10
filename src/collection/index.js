@@ -40,6 +40,9 @@ export function arelatStar(i){
     return _
 }
 
+function length(xs){
+    return xs.length
+}
 
 /**
  * Array'd Lengths of arrays
@@ -51,9 +54,8 @@ export function lengthsA(xs){
     if(!xs){
         return []
     }
-    return xs.map( x => x.length )
+    return xs.map( length )
 }
-
 
 /**
  * Returns the length of the shortest array in xs
